@@ -1,0 +1,22 @@
+diff --git a/build b/build.bash
+similarity index 100%
+rename from build
+rename to build.bash
+diff --git a/src/VALfiles/TimSupport.cpp b/src/VALfiles/TimSupport.cpp
+index c0b6195..15287ba 100644
+--- a/src/VALfiles/TimSupport.cpp
++++ b/src/VALfiles/TimSupport.cpp
+@@ -1345,6 +1345,13 @@ void doExamine::operator()(PropertySpace * p)
+ 
+ template<class TI>
+ struct getConditionally {
++
++  using difference_type = std::ptrdiff_t;
++  using value_type = typename TI::value_type;
++  using pointer = TI;
++  using reference = typename TI::reference;
++  using iterator_category = typename TI::iterator_category;
++
+ 	bool cond;
+ 	Property * prop;
+ 	TI pit;
