@@ -11,6 +11,7 @@ URL:            https://nms.kcl.ac.uk/planning/software/popf.html
 Source0:        https://github.com/aldukeman/popf2/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 
 Patch0:         popf.iterator-type-traits.patch
+Patch1:         popf.vector-init.patch
 
 BuildRequires:  bison
 BuildRequires:  cmake
